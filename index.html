@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="https://unpkg.com/vue@next"></script>
+    <script type="module" src="js/controller.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <setup-page :gametimer='gametimer'></setup-page>
+      <timer-page :gametimer='gametimer'></timer-page>
+    </div>
+  </body>
+</html>
