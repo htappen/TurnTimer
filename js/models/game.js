@@ -4,29 +4,27 @@ const MAX_PLAYERS = 6
 const START_PLAYERS = 2
 
 class GameTimer {
-  #_timers
-  #_paused = true
-  #_interval
-  #_activePlayerId = ""
+  _timers = []
+  _interval
+  _paused = true
+  _activePlayerId = ""
+  _activePlayerIndex = 0
   baseMinutes = 15
-  #_activePlayerIndex
   
   constructor() {
-    this._timers = []
 
     for (let i = 0; i < START_PLAYERS; i++) {
       this.addPlayer()
     }
-    this._activePlayerIndex = 0
-    this._activePlayerId = this._timers[0].id
-  }
-
-  get timers() {
-    return this._timers
+    this._timers[0].active = true
   }
 
   get isMaxPlayers() {
     return this._timers.length >= MAX_PLAYERS
+  }
+
+  get timers() {
+    return this._timers
   }
 
   addPlayer() {
@@ -39,6 +37,9 @@ class GameTimer {
   removePlayer(id) {
     const playerIndex = this.getPlayerIndexFromId(id)
     this._timers.splice(playerIndex, 1)
+    if (playerIndex == this._activePlayerIndex || id == this._activePlayerId) {
+      this._timers[0].active = true
+    }
   }
 
   getPlayerIndexFromId(id) {
@@ -52,7 +53,6 @@ class GameTimer {
   set activePlayerId(val) { 
     this._timers[this._activePlayerIndex].active = false
     this._activePlayerIndex = this.getPlayerIndexFromId(val)
-    this._timers[this._activePlayerIndex].active = true
   }
 
   tick() {

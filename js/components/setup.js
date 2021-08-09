@@ -3,9 +3,9 @@ const PlayerSetupItem = {
     'timer'
   ],
   template: `
-  <div v-bind:class="timer.color">
+  <div class="setup-item" v-bind:class="timer.color">
     <button class="remove-button" @click="removePlayer">X</button>
-    <input v-model="timer.name" />
+    <input v-model="timer.name" type="text"/>
   </div>
   `,
   methods: {
@@ -18,7 +18,7 @@ const PlayerSetupItem = {
 const SetupPage = {
   props: [ 'gametimer' ],
   template: `
-  <div class='setup-box'>
+  <div class='setup-box' v-show="gametimer.paused">
     <div class="length-setup">
       <input type="number" v-model="gametimer.baseMinutes"/>
     </div>
