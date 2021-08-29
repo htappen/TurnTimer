@@ -82,14 +82,18 @@ class PlayerTimer {
   }
 
   get color() {
-    return `${this._color}`
+    return this._color
   }
 
   set color(val) {
     if (COLOR_LIST.indexOf(this._color) < 0) {
-      COLOR_LIST.push(this._color)
+      COLOR_LIST.unshift(this._color)
     }
     this._color = val
+  }
+
+  cleanup() {
+    this.color = ""
   }
 }
 

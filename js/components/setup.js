@@ -20,17 +20,19 @@ const SetupPage = {
   template: `
   <div class='setup-box' v-show="gametimer.paused">
     <div class="length-setup">
-      <input type="number" v-model="gametimer.baseMinutes"/>
+      <label>
+        Minutes per player: <input class="length-input" type="number" v-model="gametimer.baseMinutes"/>
+      </label>
     </div>
     <div class="player-setup-list">
       <player-setup-item v-for="t in gametimer.timers" :timer="t">
       </player-setup-item>
     </div>
-    <div class="add-button" @click="addPlayer" :disabled="gametimer.isMaxPlayers">
-      <button>Add</button>
+    <div class="add-button">
+      <button :disabled="gametimer.isMaxPlayers" @click="addPlayer">Add</button>
     </div>
     <div class="start-game">
-      <button @click="unpause">Start game</button>
+      <button :disabled="gametimer.numPlayers == 0" @click="unpause">Start game</button>
     </div>
   </div>
   `,
