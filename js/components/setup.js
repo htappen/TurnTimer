@@ -5,7 +5,7 @@ const PlayerSetupItem = {
   template: `
   <div class="setup-item" v-bind:class="timer.color">
     <button class="remove-button" @click="removePlayer">X</button>
-    <input v-model="timer.name" type="text"/>
+    <input class="player-name-input" v-model="timer.name" type="text"/>
   </div>
   `,
   methods: {

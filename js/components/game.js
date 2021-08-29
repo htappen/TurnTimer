@@ -1,7 +1,7 @@
 const PlayerTimer = {
   props: [ 'timer' ],
   template: `
-  <div class="player-timer" :class="timer.color" :class="timer.active ? 'active': 'inactive'" @click="activate">
+  <div class="player-timer" :class="[ timer.color, timer.active ? 'active': 'inactive']" @click="activate">
     <div class="time-display">{{ timeRemaining }}</div>
     <div class="player-name">{{ timer.name }}</div>
   </div>

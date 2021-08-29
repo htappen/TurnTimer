@@ -1,22 +1,22 @@
 const PLAYER_NAMES = [
-  'Forrest Gump',
-  'Woody','Captain Miller','The Joker','Yoda','Paul Edgecombe','Pumbaa','Chewbacca','The Tramp','Timon',
-  'Josh Baskin','T-800 / The Terminator','Andrew Beckett','Bruce Wayne / Batman',
+  'Forrest Gump','Woody','The Joker','Yoda','Pumbaa','Chewbacca','Timon',
+  'The Terminator','Bruce Wayne','Han Solo','Arsene Lupin','Doctor Who',
+  'Indiana Jones', 'Arthur Pendragon', 'Lancelot', 'Galadriel',
   "Scarlett O'Hara",'Chuck Norris','The Dude','Man with No Name','Atticus Finch','E.T',
   'Mario','Sonic the Hedgehog','Samus Aran','Crash Bandicoot','Master Chief',
   'Hannibal Lecter','Vito Corleone','John Rambo','Gollum','Mufasa','Ellen Ripley','Sirius Black','Superman','Bob the Minion',
-  'Sarah Connor','James T. Kirk','Benjamin Buford \"Bubba\" Blue','Norman Bates','Sherlock Holmes','Peter Venkman','Harry Potter',
+  'Sarah Connor','James T. Kirk','Norman Bates','Sherlock Holmes','Peter Venkman','Harry Potter',
   'Aragorn','C-3PO','Spock','Wonder Woman','Euphegenia Doubtfire','Thor','Gandalf','Loki','Genie','Dr. Emmett Brown',
-  'John McClane','Groot','Professor X','Iron Man','Hulk','Donkey','Ellis Boyd \"Red\" Redding','Hermione Granger',
+  'John McClane','Groot','Professor X','Iron Man','Hulk','Donkey','Hermione Granger',
   'Professor Minerva McGonagall','Obi-Wan Kenobi','Shrek','Rocky Balboa','Alfred Pennyworth','Marty McFly','Wolverine','Beetlejuice',
-  'Luke Skywalker','Professor Severus Snape','Mr. Kesuke Miyagi','Legolas','Buzz Lightyear','Rubeus Hagrid','Captain America',
+  'Luke Skywalker','Professor Severus Snape','Mr. Miyagi','Legolas','Buzz Lightyear','Rubeus Hagrid','Captain America',
   'Luna Lovegood','Andy Dufresne','Professor Albus Dumbledore','Darth Maul','Jack Torrance','R2-D2','Neo','Minions',
   'Inigo Montoya','Lord Voldemort','Black Widow','Jean-Luc Picard','Wednesday Addams','Leia Organa','Deadpool','Palpatine','Boba Fett',
   'Jason Bourne','Dorothy Gale','Starlord','Robin Hood','Kevin McCallister','Bilbo Baggins','Maximus Decimus Meridius'
   ,'Qui-Gon Jinn','Ferris Bueller','Ronald Weasley','Olaf','Scarecrow','V','Jessica Rabbit','Mr. Bean','Spider-Man','Peregrin Took',
-  'Simba','Buddy the Elf','Quint','Oskar Schindler','Jack Skellington','Rocket Raccoon','Wyatt Earp','Tyler Durden','Aslan',
+  'Simba','Buddy the Elf','Jack Skellington','Rocket Raccoon','Wyatt Earp','Aslan',
   'Magneto','Clark Griswold','Elizabeth Swann','Elrond','Conan the Barbarian','Wicked Witch of the West','Maleficent','Matilda',
-  'King Kong','Mr. Incredible'
+  'King Kong','Mrs. Incredible'
 ]
 
 const COLOR_LIST = [

@@ -5,6 +5,7 @@ body, html {
   width: 100%;
   position: relative;
   font-size: 14pt;
+  font-family: "Klee One", "Roboto", sans-serif;
 }
 #app {
   height: 100%;
@@ -15,7 +16,6 @@ body, html {
   height: 100%;
 }
 
-/* TODO: use a flexbox here */
 input {
   font-size: 20pt;
   border: none;
@@ -23,15 +23,11 @@ input {
   width: 85%;
   margin: 10px;
   text-overflow: ellipsis;
+  font-family: "Klee One", "Roboto", sans-serif;
 }
 
 input.length-input {
   width: 50%;
-}
-
-.remove-button {
-  width: 10%;
-  height: 100%;
 }
 
 .setup-box {
@@ -43,6 +39,9 @@ input.length-input {
 .setup-item {
   width: 80%;
   margin: 20px auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 
 .setup-item.blue input {
@@ -73,7 +72,14 @@ input.length-input {
   border-color: purple;
 }
 
+.remove-button {
+  height: 60px;
+  flex: 0 0 60px;
+}
 
+.player-name-input {
+  flex: 1 1;
+}
 
 .timer-list {
   display: flex;
@@ -82,11 +88,27 @@ input.length-input {
   height: 100%;
 }
 
+@media (max-width: 1024px) {
+  .timer-list {
+    flex-direction: column;
+  }
+}
+
 .player-timer {
   flex: 0 1 100%;
   height: 100%;
   border: 2px solid;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .player-timer {
+    flex-direction: row;
+  }
 }
 
 .player-timer.red {
@@ -134,9 +156,43 @@ input.length-input {
 }
 
 .time-display {
-  font-size: 20pt;
-  text-align: center;
+  margin: auto;
+  height: 120px;
+  font-size: 100px;
+  flex: 0 0 auto;
+  align-self: center;
+}
+
+.inactive .time-display {
+  display: none;
+}
+
+.player-name {
+  height: 50px;
   width: 100%;
+  font-size: 30px;
+  flex: 0 0 auto;
+  align-self: flex-end;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0px auto 0px auto;
+}
+
+.inactive .player-name {
+  align-self: center;
+  margin: auto;
+}
+
+@media (max-width: 1024px) {
+  .player-name {
+    width: auto;
+    flex: 1 1 auto;
+    margin: auto;
+  }
+  .active .player-name {
+    width: 100px;
+  }
 }
 
 .pause-box {
