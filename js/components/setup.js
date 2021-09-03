@@ -4,7 +4,7 @@ const PlayerSetupItem = {
   ],
   template: `
   <div class="setup-item" v-bind:class="timer.color">
-    <button class="remove-button" @click="removePlayer">X</button>
+    <button class="remove-button" @click="removePlayer"></button>
     <input class="player-name-input" v-model="timer.name" type="text"/>
   </div>
   `,
@@ -28,11 +28,9 @@ const SetupPage = {
       <player-setup-item v-for="t in gametimer.timers" :timer="t">
       </player-setup-item>
     </div>
-    <div class="add-button">
-      <button :disabled="gametimer.isMaxPlayers" @click="addPlayer">Add</button>
-    </div>
-    <div class="start-game">
-      <button :disabled="gametimer.numPlayers == 0" @click="unpause">Start game</button>
+    <div class="game-buttons">
+      <button class="add-button" :disabled="gametimer.isMaxPlayers" @click="addPlayer"></button>
+      <button class="start-game" :disabled="gametimer.numPlayers == 0" @click="unpause"></button>
     </div>
   </div>
   `,

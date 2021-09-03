@@ -30,7 +30,7 @@ const TimerPage = {
       </player-timer>
     </div>
     <div class="pause-box">
-      <button @click="pauseGame">Pause</button>
+      <button @click="pauseGame"></button>
     </div>
   </div>
   `,

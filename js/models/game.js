@@ -44,11 +44,16 @@ class GameTimer {
     const playerIndex = this.getPlayerIndexFromId(id)
     this._timers[playerIndex].cleanup()
     this._timers.splice(playerIndex, 1)
-    if (
-        this._timers.length > 0 && 
-        (playerIndex == this._activePlayerIndex || id == this._activePlayerId)
-      ) {
-      this._timers[0].active = true
+
+    // Deal with cases where the last player got removed
+    if (this._timers.length > 0) {
+      // Reset to another player
+      if (playerIndex == this._activePlayerIndex || id == this._activePlayerId) {
+        this._timers[0].active = true
+      }
+    } else {
+      this._activePlayerIndex = -1;
+      this._activePlayerId = "";
     }
   }
 

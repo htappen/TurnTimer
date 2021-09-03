@@ -11,9 +11,10 @@ body, html {
   height: 100%;
 }
 
-.setup-box, .timer-box {
+.setup-box, .timer-box, .game-buttons {
   width: 100%;
   height: 100%;
+  text-align: center;
 }
 
 input {
@@ -75,6 +76,76 @@ input.length-input {
 .remove-button {
   height: 60px;
   flex: 0 0 60px;
+}
+
+.remove-button {
+  border: none;
+  padding: 0px;
+  margin: 0px;
+  background-size: cover;
+  background-clip: border-box;
+}
+
+.red .remove-button {
+  background-image: url("/img/remove_red.jpg")
+}
+.blue .remove-button {
+  background-image: url("/img/remove_blue.jpg")
+}
+.green .remove-button {
+  background-image: url("/img/remove_green.jpg")
+}
+.pink .remove-button {
+  background-image: url("/img/remove_pink.jpg")
+}
+.yellow .remove-button {
+  background-image: url("/img/remove_yellow.jpg")
+}
+.orange .remove-button {
+  background-image: url("/img/remove_orange.jpg")
+}
+.purple .remove-button {
+  background-image: url("/img/remove_purple.jpg")
+}
+
+
+.add-button {
+  background-image: url("/img/add.jpg");
+}
+
+.start-game {
+  background-image: url("/img/start.jpg");
+}
+
+.pause-box button {
+  background-image: url("/img/pause.png");
+}
+
+button {
+  width: 60px;
+  height: 60px;
+  background-size: cover;
+  background-clip: border-box;
+  border: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.game-buttons button {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+button:hover {
+  background-position: left -60px top 0px;
+}
+
+button:active {
+  background-position: left -120px top 0px;
+}
+
+button:disabled {
+  background-position: left -180px top 0px;
 }
 
 .player-name-input {
@@ -203,9 +274,5 @@ input.length-input {
   width: 100px;
   margin: auto;
   z-index: 1000;
-}
-
-.pause-box button {
-  width: 100%;
-  height: 100%;
+  background: transparent
 }
