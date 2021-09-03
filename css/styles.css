@@ -87,38 +87,38 @@ input.length-input {
 }
 
 .red .remove-button {
-  background-image: url("/img/remove_red.jpg")
+  background-image: url("../img/remove_red.jpg")
 }
 .blue .remove-button {
-  background-image: url("/img/remove_blue.jpg")
+  background-image: url("../img/remove_blue.jpg")
 }
 .green .remove-button {
-  background-image: url("/img/remove_green.jpg")
+  background-image: url("../img/remove_green.jpg")
 }
 .pink .remove-button {
-  background-image: url("/img/remove_pink.jpg")
+  background-image: url("../img/remove_pink.jpg")
 }
 .yellow .remove-button {
-  background-image: url("/img/remove_yellow.jpg")
+  background-image: url("../img/remove_yellow.jpg")
 }
 .orange .remove-button {
-  background-image: url("/img/remove_orange.jpg")
+  background-image: url("../img/remove_orange.jpg")
 }
 .purple .remove-button {
-  background-image: url("/img/remove_purple.jpg")
+  background-image: url("../img/remove_purple.jpg")
 }
 
 
 .add-button {
-  background-image: url("/img/add.jpg");
+  background-image: url("../img/add.jpg");
 }
 
 .start-game {
-  background-image: url("/img/start.jpg");
+  background-image: url("../img/start.jpg");
 }
 
 .pause-box button {
-  background-image: url("/img/pause.png");
+  background-image: url("../img/pause.png");
 }
 
 button {
