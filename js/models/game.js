@@ -9,6 +9,7 @@ class GameTimer {
   _paused = true
   _activePlayerId = ""
   _activePlayerIndex = -1
+  currentTurnTime = 0
   baseMinutes = 15
   
   constructor() {
@@ -73,11 +74,13 @@ class GameTimer {
       ) {
         this._timers[this._activePlayerIndex].active = false
     }
+    this._currentTurnTime = 0
     this._activePlayerId = val
     this._activePlayerIndex = this.getPlayerIndexFromId(val)
   }
 
   tick() {
+    this.currentTurnTime++
     this._timers[this._activePlayerIndex].tick()
   }
 
@@ -86,6 +89,7 @@ class GameTimer {
   }
 
   set paused(val) {
+    this.currentTurnTime = 0
     this._paused = !!val
     if (this._paused) {
       clearInterval(this._interval)

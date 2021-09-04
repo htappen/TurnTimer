@@ -22,9 +22,10 @@ const PlayerTimer = {
 }
 
 const TimerPage = {
-  props: [ 'gametimer' ],
+  props: [ 'gametimer', 'turntime' ],
   template: `
   <div class="timer-box" v-show="!gametimer.paused">
+    <audio id="downBeat"><source src="audio/downBeat.mp3" type="audio/mpeg"></audio>
     <div class="timer-list">
       <player-timer v-for="t in gametimer.timers" :timer="t">
       </player-timer>
@@ -40,6 +41,13 @@ const TimerPage = {
   methods: {
     pauseGame() {
       this.gametimer.paused = true
+    }
+  },
+  watch: {
+    turntime(newTime) {
+      if (newTime > 0 && newTime % 30 == 0) {
+        document.getElementById('downBeat').play()
+      }
     }
   }
 }
