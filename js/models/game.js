@@ -66,8 +66,12 @@ class GameTimer {
   }
 
   set activePlayerId(val) {
-    if (this._activePlayerIndex >= 0 && val != this._activePlayerId) {
-      this._timers[this._activePlayerIndex].active = false
+    if (
+        this._timers[this._activePlayerIndex] &&
+        this._timers[this._activePlayerIndex].active &&
+        val != this._activePlayerId
+      ) {
+        this._timers[this._activePlayerIndex].active = false
     }
     this._activePlayerId = val
     this._activePlayerIndex = this.getPlayerIndexFromId(val)
