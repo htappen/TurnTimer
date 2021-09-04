@@ -9,6 +9,7 @@ body, html {
 }
 #app {
   height: 100%;
+  width: 100%;
 }
 
 .setup-box, .timer-box, .game-buttons {
@@ -275,4 +276,16 @@ button:disabled {
   margin: auto;
   z-index: 1000;
   background: transparent
+}
+
+@keyframes zoom {
+  0%    { transform: scale(1.0); }
+  50%   { transform: scale(1.5); }
+  100%  { transform: scale(1.0); }
+}
+
+.zoom-anim {
+  animation-name: zoom;
+  animation-duration: 1s;
+  animation-timing-function: ease;
 }
